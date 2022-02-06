@@ -1,36 +1,57 @@
 package com.example.hellowolrld
 
 fun main(){
-    var caso1: Array<Int?> = arrayOf(2, null, 4, 1)
-    var caso2: Array<Int?> = arrayOf(4, 1, 3, 10)
-    var caso3: Array<Int?> = arrayOf()
+    var caso1 = null
+    var caso2: Array<Int> = arrayOf(4, 1, 3, 10)
+    var caso3: Array<Int> = arrayOf()
+    var caso4: Array<Int> = arrayOf(3, 4, 1, 2, 6, 4, 1)
+    var caso5: Array<Int> = arrayOf(2, 3, 1, 5, 1)
+    var caso6: Array<Int> = arrayOf()
+    var caso7 = null
+    var caso8: Array<Int> = arrayOf(1, 2, 3 ,1)
+    var caso9 = null
+    var caso10: Array<Int> = arrayOf()
+
 
     var res1 = sumArray(caso1)
     var res2 = sumArray(caso2)
     var res3 = sumArray(caso3)
+    var res4 = sumArray(caso4)
+    var res5 = sumArray(caso5)
+    var res6 = sumArray(caso6)
+    var res7 = sumArray(caso7)
+    var res8 = sumArray(caso8)
+    var res9 = sumArray(caso9)
+    var res10 = sumArray(caso10)
 
-    println(res1)
-    println(res2)
-    println(res3)
+    println("Test1 passed ${res1==-2}")
+    println("Test2 passed ${res2==18}")
+    println("Test3 passed ${res3==-1}")
+    println("Test4 passed ${res4==21}")
+    println("Test5 passed ${res5==12}")
+    println("Test6 passed ${res6== -1}")
+    println("Test7 passed ${res7==-2}")
+    println("Test8 passed ${res8==7}")
+    println("Test9 passed ${res9==-2}")
+    println("Test10 passed ${res10==-1}")
 }
 
-fun sumArray(collection : Array<Int?>):Int{
+fun sumArray(collection : Array<Int>?):Int {
     var res = 0
-    var i = 0
-    if(collection.isNotEmpty()){
-        if(!collection.contains(null)){
-            while(i <= collection.size) res += collection[i]!!
+    if (collection != null){
+        if (collection.isNotEmpty()){
+            res = collection.sum()
         }
         else{
-            res = -2
+            res = -1
         }
     }
     else{
-        res = -1
+        res = -2
     }
-    return res
-}
 
+    return res
+    }
 
 /*
     Realice la suma de una colección de datos pasados por parámetros

@@ -1,13 +1,32 @@
 package com.example.hellowolrld
 
 fun main(){
+    var caso1 = 2
+
+    var res1 =  arreglo(caso1)
+
+    println(res1)
 
 }
 
-fun arreglo(Valor : Int): Array<Int> {
-    var res : Array<Int> = arrayOf()
-    return res
+fun arreglo(Valor : Int){
+    var res = ArrayList<Int>()
+    var x = 0
+
+    while(x < (Valor - 1)){
+        var Arreglo = ArrayList<Int>()
+    }
+   /*for(i  in 0 until Valor){
+       res.add(Valor)
+   }
+    res.forEach{
+        println(it)
+    }
+
+    */
 }
+
+
 /*
     El algoritmo deberá aceptar un número y generar un arreglo identidad que refleje n columnas y n
     filas.
