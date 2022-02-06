@@ -12,16 +12,16 @@ fun main(){
     var caso9: Array<Int> = arrayOf()
     var caso10: Array<Int> = arrayOf(1, 8, 23, 22, 30)
 
-    var res1 = SumaArreglos(caso1)
-    var res2 = SumaArreglos(caso2)
-    var res3 = SumaArreglos(caso3)
-    var res4 = SumaArreglos(caso4)
-    var res5 = SumaArreglos(caso5)
-    var res6 = SumaArreglos(caso6)
-    var res7 = SumaArreglos(caso7)
-    var res8 = SumaArreglos(caso8)
-    var res9 = SumaArreglos(caso9)
-    var res10 = SumaArreglos(caso10)
+    var res1 = sumArrays(caso1)
+    var res2 = sumArrays(caso2)
+    var res3 = sumArrays(caso3)
+    var res4 = sumArrays(caso4)
+    var res5 = sumArrays(caso5)
+    var res6 = sumArrays(caso6)
+    var res7 = sumArrays(caso7)
+    var res8 = sumArrays(caso8)
+    var res9 = sumArrays(caso9)
+    var res10 = sumArrays(caso10)
 
     println("caso1 Test passed ${res1==55}")
     println("caso2 Test passed ${res2==-1}")
@@ -36,9 +36,9 @@ fun main(){
 
 }
 
-fun SumaArreglos(collection:Array<Int>): Int{
+fun sumArrays(collection:Array<Int>): Int{
     var res : Int = 0
-    if (collection.size == 0){
+    if (collection.isEmpty()){
         res = -1
     }
     else{

@@ -12,16 +12,16 @@ fun main(){
     var caso9: Array<Int?> = arrayOf(6, 2, 1)
     var caso10: Array<Int?> = arrayOf(1, 1, 1)
 
-    var res1 = compararvalores(caso1)
-    var res2 = compararvalores(caso2)
-    var res3 = compararvalores(caso3)
-    var res4 = compararvalores(caso4)
-    var res5 = compararvalores(caso5)
-    var res6 = compararvalores(caso6)
-    var res7 = compararvalores(caso7)
-    var res8 = compararvalores(caso8)
-    var res9 = compararvalores(caso9)
-    var res10 = compararvalores(caso10)
+    var res1 = comparacion(caso1)
+    var res2 = comparacion(caso2)
+    var res3 = comparacion(caso3)
+    var res4 = comparacion(caso4)
+    var res5 = comparacion(caso5)
+    var res6 = comparacion(caso6)
+    var res7 = comparacion(caso7)
+    var res8 = comparacion(caso8)
+    var res9 = comparacion(caso9)
+    var res10 = comparacion(caso10)
 
     println("caso1 Test passed ${res1==6}")
     println("caso2 Test passed ${res2==-100}")
@@ -35,12 +35,12 @@ fun main(){
     println("caso10 Test passed ${res10==0}")
 }
 
-fun compararvalores(collection:Array<Int?>): Int{
+fun comparacion(collection:Array<Int?>): Int{
     var res : Int = -1
     var val1 = collection.component1()
     var val2 = collection.component2()
     var val3 = collection.component3()
-    if (val1 == null || val2 == null || val3 == null){
+    if (collection.contains(null)){
         res = -100
     }
     else if (val1 == val2 && val1 == val3){
